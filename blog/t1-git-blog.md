@@ -1,19 +1,8 @@
-<!-- This template is in markdown, not html, so
-  it will not render beautifully when you copy and
-  paste it into your github.io site, but it will at
-  least be published. Next week you'll be creating a
-  blog template using HTML and CSS and you'll be able
-  to copy and paste the blog posts from week 1 in there
-  to make them pretty next week.
+My First Technical Blog
 
-  For now, please replace the title, subtitle (if desired),
-  and date with the text you would like. Markdown is pretty
-  simple, so you can just feel free to type. =) -->
+Version Controls, Git, and GitHub, Oh My!
 
-
-# My First Technical Blog
-#### Version Controls, Git, and GitHub, Oh My!
-#### September 18, 2014
+September 18, 2014
 
 Version control is a term I've heard a lot in the past and understood the concept in either very abstract or very macroscopic ways. Basically, I viewed it through the lens of a web and software project manager. After reading the material for this lesson, however, I've grasped it way better than before. An all-encompassing description, at least for the purpose of web or software development, would be this: version control is a system that will continuously track changes made to code, such that those previous changes can be retrieved later for reference, review, or evaluation.
 
