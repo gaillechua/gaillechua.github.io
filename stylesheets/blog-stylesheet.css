@@ -1,0 +1,153 @@
+div {
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: purple;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#left ul a li:hover {
+  background-color: white;
+}
+
+#header {
+  position: relative;
+  height: 90px;
+  width: 1200px;
+  background-color: teal;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-image: url("#");
+  display: block;
+}
+
+#navimenu {
+  height: 40px;
+  width: 1200px;
+  background-color: teal;
+  margin-bottom: 10px;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  display: block;
+}
+
+#left {
+  width: 200px;
+  height: 800px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: teal;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  display: inline-block;
+  float: left;
+}
+
+#footer {
+  height: 50px;
+  width: 1200px;
+  background-color: gray;
+  color: white;
+  padding-top: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  clear: both;
+  display: block;
+  position: relative;
+  margin-bottom: 10;
+  margin-top: 180px;
+}
+
+#navimenu ul a li {
+  display: inline;
+  font-family: Arial;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+  margin-left: 150px;
+  font-weight: bold;
+}
+
+#left ul li {
+  padding: 0px 0px 0px 0px;
+  list-style-position: left;
+  font-family: Arial;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: -30px;
+  width: 180px;
+  text-align: left;
+  color: #BAD1D1;
+}
+
+#left img {
+  margin-left: 25px;
+  margin-top: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+h2 {
+  text-align: center;
+  color: #BAD1D1;
+}
+
+.blogpost {
+  width: 800px;
+  height: 600px;
+  padding: 20px 0px 0px 20px;
+  display: inline-block;
+  float: center;
+}
+
+.blogtitle {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Arial;
+  color: gray;
+}
+
+.blogsubtitle {
+  font-size: 20px;
+  font-family: Arial;
+  color: gray;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Arial;
+  color: orange;
+  padding-top: 5px;
+}
+
+.content {
+  font-size: 14px;
+  font-family: Arial;
+  color: black;
+}
+
+#copyright {
+  text-align: center;
+}
