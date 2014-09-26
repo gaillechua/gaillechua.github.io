@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 div {
   border-radius: 3px;
 }
@@ -19,53 +23,43 @@ ul {
   list-style-type: none;
 }
 
-#left ul a li:hover {
+#right ul a li:hover {
   background-color: white;
 }
 
 #header {
   position: relative;
-  height: 90px;
-  width: 1200px;
-  background-color: teal;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  background-image: url("#");
-  display: block;
+  height: 320px;
+  width: 1080px;
+  background-color: black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-image: url("https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/t31.0-8/10494954_10101324977920667_2471993881391583002_o.jpg");
+  background-size: 100%;
+  display: center;
 }
 
-#navimenu {
-  height: 40px;
-  width: 1200px;
-  background-color: teal;
-  margin-bottom: 10px;
-  padding-top: 1px;
-  padding-bottom: 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  display: block;
-}
 
-#left {
+#right {
   width: 200px;
-  height: 800px;
+  height: 350px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 30px;
   margin-bottom: 10px;
-  margin-right: 10px;
-  background-color: teal;
+  margin-right: 40px;
+  background-color: black;
   border-style: solid;
-  border-width: 2px;
-  border-color: black;
+  border-width: 1px;
+  border-color: #BAD1D1;
+  border-radius: 10px;
   display: inline-block;
-  float: left;
+
 }
 
 #footer {
   height: 50px;
-  width: 1200px;
+  width: 1080px;
   background-color: gray;
   color: white;
   padding-top: 5px;
@@ -88,37 +82,34 @@ ul {
   font-weight: bold;
 }
 
-#left ul li {
+#right p {
   padding: 0px 0px 0px 0px;
   list-style-position: left;
+  font-size: 12px;
   font-family: Arial;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  margin-left: -30px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
   width: 180px;
-  text-align: left;
-  color: #BAD1D1;
+  text-align: center;
+  color: white;
 }
 
-#left img {
+#right img {
   margin-left: 25px;
   margin-top: 10px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
-}
-
-h2 {
-  text-align: center;
-  color: #BAD1D1;
+  border-color: white;
+  border-radius: 50%;
 }
 
 .blogpost {
   width: 800px;
   height: 600px;
-  padding: 20px 0px 0px 20px;
+  padding: 20px 50px 0px 20px;
   display: inline-block;
-  float: center;
+  float: left;
 }
 
 .blogtitle {
@@ -131,23 +122,24 @@ h2 {
 .blogsubtitle {
   font-size: 20px;
   font-family: Arial;
-  color: gray;
+  color: orange;
 }
 
 .date {
   font-weight: bold;
   font-size: 12px;
   font-family: Arial;
-  color: orange;
+  color: teal;
   padding-top: 5px;
 }
 
 .content {
   font-size: 14px;
   font-family: Arial;
-  color: black;
+  color: white;
 }
 
 #copyright {
   text-align: center;
 }
+
