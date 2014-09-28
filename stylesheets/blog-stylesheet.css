@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-family: Helvetica;
 }
 
 div {
@@ -12,16 +13,48 @@ a {
 }
 
 a:visited {
-  color: purple;
+  color: orange;
 }
 
 a:hover {
-  color: purple;
+  color: teal;
 }
 
 ul {
   list-style-type: none;
 }
+
+#navbar {
+  list-style-type: none;
+  padding-bottom: 5px;
+  padding-top: 8px;
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#navbar li a {
+  font-size: 16px;
+}
+
+#navbar li {
+  color: white;
+  font-style: Helvetica;
+  display: inline;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.rule {
+  border-top: thin solid white;
+  border-width: 1px;
+  width: 120%;
+  margin-left: -10px;
+  text-align: center;
+}
+
 
 #right ul a li:hover {
   background-color: white;
@@ -32,13 +65,13 @@ ul {
   height: 320px;
   width: 1080px;
   background-color: black;
-  padding-top: 0px;
+  padding-top: 10px;
   padding-bottom: 0px;
+  margin-top: 10px;
   background-image: url("https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/t31.0-8/10494954_10101324977920667_2471993881391583002_o.jpg");
   background-size: 100%;
   display: center;
 }
-
 
 #right {
   width: 200px;
@@ -60,18 +93,20 @@ ul {
 
 #footer {
   height: 50px;
-  width: 1080px;
-  background-color: gray;
-  color: white;
-  padding-top: 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  clear: both;
-  display: block;
-  position: relative;
-  margin-bottom: 10;
-  margin-top: 180px;
+  width: 100%;
+  background-color: black;
+  float: left;
+  position: fixed;
+  bottom: 0;
+  z-index: 999999;
+  text-align: center;
+}
+
+#footer img {
+  display: inline;
+  height: 30px;
+  width: 30px;
+  padding-top: 10px;
 }
 
 #navimenu ul a li {
@@ -105,7 +140,7 @@ ul {
   border-radius: 50%;
 }
 
-.blogpost {
+.blogpost, .blogpostindex {
   width: 800px;
   height: 600px;
   padding: 20px 0px 0px 20px;
@@ -118,6 +153,7 @@ ul {
   font-size: 30px;
   font-family: Arial;
   color: gray;
+  padding-top: 20px;
 }
 
 .blogsubtitle {
@@ -134,13 +170,16 @@ ul {
   padding-top: 5px;
 }
 
-.content {
+.content, .abstract {
   font-size: 14px;
   font-family: Arial;
   color: white;
 }
 
 #copyright {
+  color: white;
   text-align: center;
+  padding-top: 10px;
+  font-size: 10px;
 }
 
