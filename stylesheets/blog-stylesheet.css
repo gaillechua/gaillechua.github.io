@@ -1,6 +1,7 @@
 body {
-  background-color: black;
+  background-color: #171717;
   font-family: Helvetica;
+  color: white;
 }
 
 div {
@@ -91,24 +92,6 @@ ul {
 
 }
 
-#footer {
-  height: 50px;
-  width: 100%;
-  background-color: black;
-  float: left;
-  position: fixed;
-  bottom: 0;
-  z-index: 999999;
-  text-align: center;
-}
-
-#footer img {
-  display: inline;
-  height: 30px;
-  width: 30px;
-  padding-top: 10px;
-}
-
 #navimenu ul a li {
   display: inline;
   font-family: Arial;
@@ -143,7 +126,7 @@ ul {
 .blogpost, .blogpostindex {
   width: 800px;
   height: 600px;
-  padding: 20px 0px 0px 20px;
+  padding: 20px 0px 30px 20px;
   display: inline-block;
   position: right;
 }
@@ -171,15 +154,53 @@ ul {
 }
 
 .content, .abstract {
-  font-size: 14px;
+  font-size: 16px;
   font-family: Arial;
   color: white;
+  padding-bottom: 150px;
 }
 
-#copyright {
+.abstract {
+  font-size: 16px;
+  font-family: Arial;
   color: white;
-  text-align: center;
-  padding-top: 10px;
-  font-size: 10px;
+  padding-bottom: 10px;
 }
 
+
+#footer {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  float: left;
+  position: fixed;
+  bottom: 0;
+  z-index: 999999;
+  text-align: center;
+}
+
+#footer img {
+  display: inline;
+  height: 30px;
+  width: 30px;
+  padding-top: 10px;
+}
+
+#social {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+  height: 60px;
+} /* This was used to clear the main body content from going behind the sticky footer */

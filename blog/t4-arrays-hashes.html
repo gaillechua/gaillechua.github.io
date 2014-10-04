@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Gaille's Blog</title>
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css"/>
+    </head>
+
+  <body>
+
+    <table class="rule"></table>
+
+    <div id="navbar">
+            <li><a href="http://gaillechua.github.io">HOME</a></li>
+            <li><a href="http://gaillechua.github.io/projects">PROJECTS</a></li>
+            <li><a href="http://gaillechua.github.io/blog/index.html">BLOG</a></li>
+            <li><a href="http://gaillechua.github.io/about">ABOUT</a></li>
+            <li><a href="http://gaillechua.github.io/contact">CONTACT</a></li>
+    </div>
+
+    <table class="rule"></table>
+
+  <div id="header"></div>
+
+<div class="blogpost">
+      <div class="blogtitle">
+          Arrays & Hashes
+      </div>
+          <div class="blogsubtitle">
+            More like a disarray and clashes
+            </div>
+            <div class="date">
+              October 3, 2014
+            </div>
+              <div class="content">
+                <p>While researching on the topic of arrays and hashes, I could not help but start to think ahead about what analogy to use because I know that would be beneficial to both me and you (the reader) the most. I was jumping ahead of myself, though, realizing that most resources that describe the difference are indeed authored by programmers themselves, therefore have very candid and direct explanations. So, I'd like to first explain them as straightforwardly as I can.</p>
+
+
+                <p><b><u>WHAT THEY HAVE IN COMMON</u></b>
+                  <ul>
+                     <li><b>ARRAYS & HASHES</b></li>
+                    <li>They store collections of objects that are accessible with a key</li>
+                    <li>They hold different object types: integers, strings, floats, booleans, etc.</li>
+                    <li>They are indexed using the same square brack notation '[]'</li>
+                    <li>They both store data</li>
+                    <li>
+                  </ul>
+                </p>
+
+                <p><b><u>THE DIFFERENCES</u></b>
+                    <ul>
+                      <li><b>ARRAYS</b></li>
+                      <li>More efficient to access array elements</li>
+                      <li>Ordered, integer-indexed collections of any object</li>
+                      <li>Enumerate their values according to the integer they are indexed in. The integer '0' is the first index, therefore '1' is the second.</li>
+                      <li>Each object in an array has a unique key assigned to it. We can access any object in the array using this unique key.</li>
+                    </ul>
+
+                    <ul>
+                      <li><b>HASHES</b></li>
+                      <li>Provide more flexibility</li>
+                      <li>A collection of key-value pairs, but indexing is done via arbitrary keys of any object type, not an integer index</li>
+                      <li>Enumerate their values in the order that the corresponding keys were inserted</li>
+                      <li>A hash literal uses braces rather than square brackets. The literal must supply two objects for every entry: one for the key, the other for the value</li>
+                      <li>Hashes point an object to another object for "meaning."</li>
+                    </ul>
+                </p>
+                <p><b><u>THE ANALOGY</u></b><br><br>
+                  Let's use analogies of cars again, because it's always the first thing that comes to mind :)<br><br>
+                  An <b>array</b> is a unique list of parts that allows you to access a unique part of the car. And let's say they have to be done sequentially before you get jetting: (0) ignition key, (1) seatbelt, (2) clutch/gear shifter, (3) brake pedal, (4) gas pedal.<br><br>
+                  A <b>hash</b> is a collection of key/value pairs: (person) Gaille has a (car model) Subaru Impreza, (person) Renate has a (car model) Volkswagen GTI, (person) Eric has a (car model) Scion TC.<br><br>
+                  Eeps. I hope that makes sense?
+                </p>
+                <p>So, let's go one step further to solidify our understanding. I'll format it so that it's readable from a programmer's perspective (and gives me more practice with Ruby syntax), but is still understandable from a non-technical person's point of view (which is admittedly me still).<br><br>
+                <ul>
+                <li><b>ARRAY</b></li>
+                <li><b>carparts = Array.new</b></li>
+                <li>carparts = ([0]ignition key, [1] seatbelt, [2] clutch/bear shifter, [3] brake pedal, [4] gas pedal<br></li>
+                <li>Therefore, carparts[3] = "brake pedal" (which is the 4th step in our array; remember 0 is the starting enumerator!)<br></li><br>
+
+                <b>HASH</b><br>
+                <li>carowners = Hash.net</li>
+                <li>carowners = {'Gaille' => 'Subaru Impreza', 'Renate' => 'Volkswagen GTI', 'Eric' => 'Scion TC'}</li>
+                <li>Therefore, carowners['Renate'] => 'Volkswagen GTI'</li>
+                </p></ul>
+
+
+                <p>Phew! I hope that makes as much sense to me in my head as it does printed out. Either way, thanks for reading. Cheers!</p>
+              </div>
+</div>
+
+    <div id="right">
+      <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/599670_10100874061101587_703962791_n.jpg?oh=7f9aa35a55d9ae609ceac12942bb0ca8&oe=54CF5813" width=150 height=150/>
+          <p>Welp, here's my DBC blog. Cheers and go Raccoons 2014!</p>
+          <p>You can also find me here:</P>
+            <a href="#"><img src="http://worstframeworkever.com/images/github_icon.png" height=30 width=30/></a>
+            <a href="#"><img src="http://allthingsd.com/files/2012/06/twitter-bird-1-380x285.png" height=30 width=30/></a>
+            <a href="#"><img src="http://ideascollide.com/blog/wp-content/uploads/2014/03/linkedin-icon.png" height=30 width=30/></a>
+          </p>
+    </div>
+
+<div id="footer">
+        <div class="wrap">
+          <a href="https://github.com/gaillechua"><img src="http://www.lakshmanswaroop.com/files/img/github-icon.png"/></a>
+          <a href="http://twitter.com/gaille"><img src="http://www.iconsdb.com/icons/preview/white/twitter-xxl.png"/></a>
+          <a href="https://plus.google.com/u/0/107363398322868611640/posts"><img src="http://www.shortandsmith.com/google-plus-3-512.gif"/></a>
+          <a href="https://www.facebook.com/gaille.chua"><img src="http://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png"/></a>
+          <a href="http://www.linkedin.com/in/gabriellechua"><img src="http://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png"/></a>
+          <a href="http://instagram.com/gaillevc"><img src="http://www.iconsdb.com/icons/preview/white/instagram-xxl.png"/></a>
+          <a href="http://gaille.tumblr.com"><img src="http://www.alessiomontone.com/img/tumblr.gif"/></a>
+        </div>
+</div>
+  </body>
+  </html>
+
+
+
