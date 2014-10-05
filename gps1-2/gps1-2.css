@@ -1,0 +1,28 @@
+<style>
+    #title {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border: 3px teal ridge;
+        }
+
+    #names {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #body {
+        text-align: left;
+        font-family: Helvetica;
+    }
+
+    .question {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .answer {
+        font-style: italic;
+    }
