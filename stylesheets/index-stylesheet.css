@@ -30,7 +30,7 @@ body {
 .rule {
   border-top: thin solid white;
   border-width: 1px;
-  width: 120%;
+  width: 100%;
   margin-left: -10px;
   text-align: center;
 }
