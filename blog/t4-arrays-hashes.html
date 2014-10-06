@@ -38,30 +38,30 @@
                 <p><b><u>WHAT THEY HAVE IN COMMON</u></b>
                   <ul>
                      <li><b>ARRAYS & HASHES</b></li>
-                    <li>They store collections of objects that are accessible with a key</li>
-                    <li>They hold different object types: integers, strings, floats, booleans, etc.</li>
-                    <li>They are indexed using the same square brack notation '[]'</li>
-                    <li>They both store data</li>
-                    <li>
+                    <div id="code"><li>- They store collections of objects that are accessible with a key</li>
+                    <li>- They hold different object types: integers, strings, floats, booleans, etc.</li>
+                    <li>- They are indexed using the same square brack notation '[ ]'</li>
+                    <li>- They both store data</li>
+                    <li></div>
                   </ul>
                 </p>
 
                 <p><b><u>THE DIFFERENCES</u></b>
                     <ul>
                       <li><b>ARRAYS</b></li>
-                      <li>More efficient to access array elements</li>
-                      <li>Ordered, integer-indexed collections of any object</li>
-                      <li>Enumerate their values according to the integer they are indexed in. The integer '0' is the first index, therefore '1' is the second.</li>
-                      <li>Each object in an array has a unique key assigned to it. We can access any object in the array using this unique key.</li>
+                      <div id="code"><li>- More efficient to access array elements</li>
+                      <li>- Ordered, integer-indexed collections of any object</li>
+                      <li>- Enumerate their values according to the integer they are indexed in. The integer '0' is the first index, therefore '1' is the second.</li>
+                      <li>- Each object in an array has a unique key assigned to it. We can access any object in the array using this unique key.</li></div>
                     </ul>
 
                     <ul>
                       <li><b>HASHES</b></li>
-                      <li>Provide more flexibility</li>
-                      <li>A collection of key-value pairs, but indexing is done via arbitrary keys of any object type, not an integer index</li>
-                      <li>Enumerate their values in the order that the corresponding keys were inserted</li>
-                      <li>A hash literal uses braces rather than square brackets. The literal must supply two objects for every entry: one for the key, the other for the value</li>
-                      <li>Hashes point an object to another object for "meaning."</li>
+                      <div id="code"><li>- Provide more flexibility</li>
+                      <li>- A collection of key-value pairs, but indexing is done via arbitrary keys of any object type, not an integer index</li>
+                      <li>- Enumerate their values in the order that the corresponding keys were inserted</li>
+                      <li>- A hash literal uses braces rather than square brackets. The literal must supply two objects for every entry: one for the key, the other for the value</li>
+                      <li>- Hashes point an object to another object for "meaning."</li></div>
                     </ul>
                 </p>
                 <p><b><u>THE ANALOGY</u></b><br><br>
@@ -73,16 +73,15 @@
                 <p>So, let's go one step further to solidify our understanding. I'll format it so that it's readable from a programmer's perspective (and gives me more practice with Ruby syntax), but is still understandable from a non-technical person's point of view (which is admittedly me still).<br><br>
                 <ul>
                 <li><b>ARRAY</b></li>
-                <li><b>carparts = Array.new</b></li>
-                <li>carparts = ([0]ignition key, [1] seatbelt, [2] clutch/bear shifter, [3] brake pedal, [4] gas pedal<br></li>
-                <li>Therefore, carparts[3] = "brake pedal" (which is the 4th step in our array; remember 0 is the starting enumerator!)<br></li><br>
+                <div id="code"><li><code>carparts = Array.new</code></li>
+                <li><code>carparts = ([0]ignition key, [1] seatbelt, [2] clutch/bear shifter, [3] brake pedal, [4] gas pedal</code><br></li></div>
+                <li><br>Therefore, carparts[3] = "brake pedal" (which is the 4th step in our array; remember 0 is the starting enumerator!)<br></li><br>
 
                 <b>HASH</b><br>
-                <li>carowners = Hash.net</li>
-                <li>carowners = {'Gaille' => 'Subaru Impreza', 'Renate' => 'Volkswagen GTI', 'Eric' => 'Scion TC'}</li>
-                <li>Therefore, carowners['Renate'] => 'Volkswagen GTI'</li>
+                <div id="code"><li><code>carowners = Hash.new</code></li>
+                <li><code>carowners = {'Gaille' => 'Subaru Impreza', 'Renate' => 'Volkswagen GTI', 'Eric' => 'Scion TC'}</code></li></div>
+                <li><br>Therefore, <code>carowners['Renate'] => 'Volkswagen GTI'</code></li>
                 </p></ul>
-
 
                 <p>Phew! I hope that makes as much sense to me in my head as it does printed out. Either way, thanks for reading. Cheers!</p>
               </div>

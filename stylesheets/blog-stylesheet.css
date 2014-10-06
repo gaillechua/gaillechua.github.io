@@ -205,3 +205,9 @@ ul {
   clear: both;
   height: 60px;
 } /* This was used to clear the main body content from going behind the sticky footer */
+
+#code {
+  border: 1px solid orange;
+  margin-top: 10px;
+  background-color: #696969;
+}
