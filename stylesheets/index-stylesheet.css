@@ -22,6 +22,8 @@ body {
 #navbar li {
   color: white;
   font-style: Helvetica;
+  font-weight: bold;
+  font-size: 18px;
   display: inline;
   padding-right: 50px;
   width: 100%;
@@ -64,21 +66,18 @@ a:visited {
 #headtext {
     text-align: center;
     color: white;
-    padding-top: 20px;
+    font-size: 24px;
 }
 
 #logo {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 #logo img {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: teal;
-  border-width: 2px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
 }
 
 .rulebottomheader1 {
