@@ -43,10 +43,13 @@ ul {
 #navbar li {
   color: white;
   font-style: Helvetica;
+  font-weight: bold;
+  font-size: 18px;
   display: inline;
   padding-right: 50px;
   width: 100%;
 }
+
 
 .rule {
   border-top: thin solid white;

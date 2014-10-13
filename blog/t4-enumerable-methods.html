@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Gaille's Blog</title>
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css"/>
+    </head>
+
+  <body>
+
+    <table class="rule"></table>
+
+    <div id="navbar">
+            <li><a href="http://gaillechua.github.io">HOME</a></li>
+            <li><a href="http://gaillechua.github.io/projects">PROJECTS</a></li>
+            <li><a href="http://gaillechua.github.io/blog/index.html">BLOG</a></li>
+            <li><a href="http://gaillechua.github.io/about">ABOUT</a></li>
+            <li><a href="http://gaillechua.github.io/contact">CONTACT</a></li>
+    </div>
+
+    <table class="rule"></table>
+
+  <div id="header"></div>
+
+<div class="blogpost">
+      <div class="blogtitle">
+          The Enumerable#cycle Method
+      </div>
+          <div class="blogsubtitle">
+            Try saying that 3 times fast
+            </div>
+            <div class="date">
+              October 11, 2014
+            </div>
+              <div class="content">
+                <p>It's been a challenge trying to understand the enumerable module, and the methods that are in it. Alas, with the help of "The Well Grounded Rubyist" by David A. Black, this post is to help explain one of the dozens of enumerable methods: Enumerable#cycle.</p>
+
+                <p>The enumerable module has a collection methods that execute, or iterate, across members of a collection. The collection could be objects in an array or hash. The <code>cycle</code> methods takes all the elements in object over and over again in a neverending loop by default. But, an integer argument can also be provide and the loop will run that many times</p>
+
+                  <p align="center"><img src="http://globalnerdy.com/wordpress/wp-content/uploads/2008/07/ruby_enumerablecycle.jpg" height="" width="97"><br><a href="http://www.globalnerdy.com/"><font size="2px">Global Nerd</font></a></p>
+
+                <p>Why would looping through a collection multiple times be useful? Why could it not just loop through once and provide us with the end result, like using the <code>map</code> method? Let's look at a example with, you guessed it, cars!</p>
+
+                <p>Let's say we have a class, <code>RadCars</code> with 4 car <code>MAKES</code> at our disposal: Subaru, Volkswagen, Chevrolet, and Kia.  We also have car <code>TYPES</code>: SUV, wagon, coupe, sedan, and hybrid.</p>
+
+                <div id="code"><code>1 class RadCars<br>
+                2 # MAKES = %w{Subaru Volkswagen Chevrolet Kia}<br>
+                3 # TYPES = %w{SUV wagon coupe sedan hybrid}</div></code>
+
+                <p>But let's say we just don't have one collection of these cars, but many! We have them in 4 colors: black, white, purple and green. Therefore, we define another class to account for the multiple collections based on color, <code>CarColor</code>.</p>
+
+                <div id="code"><code>
+                1 class RadCars<br>
+                2 # MAKES = %w{Subaru Volkswagen Chevrolet Kia}<br>
+                3 # TYPES = %w{SUV wagon coupe sedan hybrid}<br>
+                4 # class CarColor<br>
+                5 ### attr_reader :cars<br>
+                6 ### def initalize(n=1)<br>
+                7 ##### @cars = []<br>
+                8 ##### MAKES.cycle(n) do |s|<br>
+                9 ###### TYPES.cycle(1) do |r|<br>
+                10 ######## @cars << "#{r} of #{s}"<br>
+                11 ###### end<br>
+                12 ##### end<br>
+                13 ### end<br>
+                14 # end<br>
+                15 end</code></div>
+
+                <p>This is where <code>cycle</code> becomes useful. It allows for the possibility of combining two or more car color collections with different colors. Therefore, <code>CarColor.new takes an argument of default 1.</code></p>
+
+                <p>For example, the below command will create 2 color combination collections of cars that contain 2 of each car for a total of 40 cars, which is the total of all of the makes and types of our RadCar class.<p>
+
+                <div id="code"><code>
+                car = RadCar: :CarColor.new(2)</div></code>
+
+                <p>And voila. You will have two collections of cars in different colors. This method will cycle through the MAKES twice, but will cycles through the TYPES once as indicated in line 9 in our code above (<code>TYPES.cycle(1)</code>). This is just another way of saying <code>each</code>. For each produced object, a new make/model/color combination is represented by a descriptive string, and is inserted into our new collection.<p>
+
+                <p>Not the most practical example, but a girl can dream about having this many cars to play with :)</p>
+
+
+              </div>
+</div>
+
+    <div id="left">
+      <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/599670_10100874061101587_703962791_n.jpg?oh=7f9aa35a55d9ae609ceac12942bb0ca8&oe=54CF5813" width=150 height=150/>
+          <p>Welp, here's my DBC blog. Cheers and go Raccoons 2014!</p>
+    </div>
+
+<div id="footer">
+        <div class="wrap">
+          <a href="https://github.com/gaillechua"><img src="http://www.lakshmanswaroop.com/files/img/github-icon.png"/></a>
+          <a href="http://twitter.com/gaille"><img src="http://www.iconsdb.com/icons/preview/white/twitter-xxl.png"/></a>
+          <a href="https://plus.google.com/u/0/107363398322868611640/posts"><img src="http://www.shortandsmith.com/google-plus-3-512.gif"/></a>
+          <a href="https://www.facebook.com/gaille.chua"><img src="http://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png"/></a>
+          <a href="http://www.linkedin.com/in/gabriellechua"><img src="http://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png"/></a>
+          <a href="http://instagram.com/gaillevc"><img src="http://www.iconsdb.com/icons/preview/white/instagram-xxl.png"/></a>
+          <a href="http://gaille.tumblr.com"><img src="http://www.alessiomontone.com/img/tumblr.gif"/></a>
+        </div>
+</div>
+  </body>
+  </html>
+
+
+
