@@ -50,11 +50,11 @@
                 11 end<br>
                 </code></div>
 
-                <p><code><b>Initialize</b></code> is a special method in Ruby programs. When you call <code><b>Cars.new</b></code> to create a new <code><b>Cars</b></code> object, Ruby creates an uninitialized object and then calls that object's initialize method, passing in any parameters that were passed to new. This gives you a chance to write code that sets up your object's state (modified and derived from <a href="http://phrogz.net/programmingruby/tut_classes.html">source</a>).</p>
+                <p><code><b>Initialize</b></code> (line 2) is a special method in Ruby programs. When you call <code><b>Cars.new</b></code> to create a new <code><b>Cars</b></code> object, Ruby creates an uninitialized object and then calls that object's initialize method, passing in any parameters that were passed to new. The parameters we have identified are make, model, and year (line 2). This gives you a chance to write code that sets up your object's state (this explanation has been modified and derived from <a href="http://phrogz.net/programmingruby/tut_classes.html"><b>source</b></a>).</p>
 
                 <p>The <code><b>"@"</b></code> sign in lines 3-5 above is used to store local variables as <b>instance variables</b>. This will allow the variables to be accessed outside of the various methods in a class. This also implies that instance variables change from object to object.</p>
 
-                <p>So why would we need a class of cars, as demonstrated by the example above? Each car will have a set of characteristics. For example, we used 3 parameters - make, model, and year - to help us identify each car. Of course, there could be many more characteristics (i.e. car type, car exterior color, car interior color, trim), but we want to keep it simple for the sake of this example. The main takeaway here is that it each new object (car) will have these declared characteristics that will be stored and will help us identify them for later use, like in instance methods!</p>
+                <p>So why would we need a class of cars, as demonstrated by the example above? Each car will have a set of characteristics. For example, we used 3 parameters - make, model, and year - to help us identify each car. Of course, there could be many more characteristics (i.e. car color, 0-60mph rate, etc.), but we want to keep it simple for the sake of this example. The main takeaway here is that it each new object (car) will have these declared characteristics that will be stored and will help us identify them for later use, like in instance methods. It also saves us a lot of time and energy, especially if we have hundreds of cars with different characteristics to list.</p>
 
                 <p>Let's say we want to add a new car with its characteristics in our class. This is how it looks:</p>
 
@@ -62,9 +62,9 @@
                 Cars.new("Subaru", "Impreza", "2011")<br><br>
                 </code></div>
 
-                <p> Here we've created a new object, in our case a car. By defining our Cars class, we can group behaviors/characteristics that cars have. We can also use the methods within the class and apply it to this car or any other car that has been created.</p>
+                <p> Here we've created a new object, in our case a car. By defining our Cars class, we can group behaviors and characteristics that our cars have. We can also use the methods within the class and apply it to this car or any other car that has been created.</p>
 
-                <p>So let's use the <code><b>display_car_stats</b></code> method from our class (line 8)! Here's what happens once we've inputted the new Car object:</p>
+                <p>So let's use the <code><b>display_car_stats</b></code> method from our class (line 8)! Here's what happens once we've inputted the new Car object that I have named <code><b>mysubie</b></code>:</p>
 
                 <div id="code"><code>
                 <br>mysubie = Cars.new("Subaru", "Impreza", "2011")<br><br>
