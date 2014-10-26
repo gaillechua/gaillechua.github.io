@@ -214,3 +214,7 @@ ul {
   margin-top: 10px;
   background-color: #696969;
 }
+
+table, th, td {
+  border: 1px solid white;
+}
