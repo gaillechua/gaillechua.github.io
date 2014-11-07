@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Gaille's Blog</title>
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css"/>
+    </head>
+
+  <body>
+
+    <table class="rule"></table>
+
+    <div id="navbar">
+            <li><a href="http://gaillechua.github.io">HOME</a></li>
+            <li><a href="http://gaillechua.github.io/projects/projects.html">PROJECTS</a></li>
+            <li><a href="http://gaillechua.github.io/blog/index.html">BLOG</a></li>
+            <li><a href="http://gaillechua.github.io/about">ABOUT</a></li>
+            <li><a href="http://gaillechua.github.io/contact">CONTACT</a></li>
+    </div>
+
+    <table class="rule"></table>
+
+  <div id="header"></div>
+
+<div class="blogpost">
+      <div class="blogtitle">
+          Blocs, Procs, and Lambdas
+      </div>
+          <div class="blogsubtitle">
+            I just need some closure
+            </div>
+            <div class="date">
+              October 26, 2014
+            </div>
+              <div class="content">
+                <p>In Ruby, there are different types of closures: blocs, procs, lambdas. Closures are blocks of code (functions) that have the ability to have scope only within its boundaries. It can store and access non-local variables of that function. Let's look at their characteristics and compare code examples.</p>
+
+                <table class="tablecolumn">
+                <tbody>
+                  <tr>
+                    <th>
+                      BLOCS<br><br><br>
+                    </th>
+                    <th>
+                      PROCS <br><i>Procedures</i><br><br>
+                    </th>
+                    <th>
+                      LAMBDAS <br><i>Procedures with required parameter checking</i>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <td> <!--Blocs-->
+                      Most common and easiest way to use closures
+                    </td>
+                    <td> <!--Procs-->
+                      Good for reusing code
+                    </td>
+                    <td> <!--Lambdas-->
+                      Good for reusing code
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td> <!--Blocs-->
+                      Not an object
+                    </td>
+                    <td> <!--Procs-->
+                      Object
+                    </td>
+                    <td> <!--Lambdas-->
+                      Object (a different kind of proc)
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td> <!--Blocs-->
+                      At most, one block can appear in an argument list
+                    </td>
+                    <td> <!--Procs-->
+                      Multiple procs can be passed to methods
+                    </td>
+                    <td> <!--Lambdas-->
+                      Multiple lambdas can be passed to methods
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td> <!--Blocs-->
+                      Each method can only receive a single bloc argument but may yield to this single block multiple times
+                    </td>
+                    <td> <!--Procs-->
+                      Don't care if they are passed the wrong number of arguments
+                    </td>
+                    <td> <!--Lambdas-->
+                      Check the number of arguments
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td> <!--Blocs-->
+                      Used with <code>&</code> sign before the variable
+                    </td>
+                    <td> <!--Procs-->
+                      Used as a data type (array, hash, string, etc.)
+                    </td>
+                    <td> <!--Lambdas-->
+                      Used as a data type (array, hash, string, etc.)
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td> <!--Blocs-->
+                      ---
+                    </td>
+                    <td> <!--Procs-->
+                      "Return" will stop method and will return the value provided
+                    </td>
+                    <td> <!--Lambdas-->
+                      "Return" will only return the value to the method and let the method continue on
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+                <p>
+                  <b>Bloc Examples</b><br>
+                </p>
+
+                <div id="code"><code>
+                1 ["Subie", "VW", "Chevy"].each { |x| puts x.to_s}<br>
+                2 <font color="#B8B8B8"># bloc is between the curly braces</font><br>
+                3 <br>
+                4 ["Subie", "VW", "Chevy"].each do |x|<br>
+                5 puts x.to_s<br>
+                6 end<br>
+                7 <font color="#B8B8B8"># bloc is everything between the do and end</font><br>
+                8  <br>
+                9  &nbsp;def accelerate(&bloc)<br>
+                10 &nbsp;&nbsp;puts "I am pushing the gas on the #{bloc.call}"<br>
+                11 end<br>
+                12 <br>
+                13 accelerate { "Subaru" }<br>
+                14 <font color="#B8B8B8"># => I am pushing the gas on the Subaru</font><br>
+                15 <br>
+                </code></div>
+
+                <br>
+
+                <p>
+                  <b>Proc Example</b><br>(from <a href="http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/">source</a>)
+                </p>
+
+                <div id="code"><code>
+                1 &nbsp;def = multiple_subies(car1, car2) <font color="#B8B8B8"># Takes multiple arguments</font><br>
+                2 &nbsp;&nbsp;car1.call<br>
+                3 &nbsp;&nbsp;car2.call<br>
+                4 &nbsp;end<br>
+                5 <br>
+                6 &nbsp;impreza = Proc.new { puts "First Subaru" }<br>
+                7 &nbsp;forester = Proc.new { puts "Second Subaru" }<br>
+                8 <br>
+                9 &nbsp;multiple_cars(impreza,forester)<br>
+                10<br>
+                </code></div>
+
+                <br>
+
+                <p>
+                  <b>Lambda Example</b><br>Taking multiple arguments
+                </p>
+
+                <div id="code"><code>
+                1 subies = cars { |car1, car2| puts "#{car1} is older than #{car2}" } <br>
+                2 <font color="#B8B8B8"># creates a lambda that takes 2 arguments</font><br>
+                3 subies.call(Impreza)<font color="#B8B8B8"> # returns ArgumentError: wrong number of arguments (1 for 2)</font><br>
+                4 <br>
+                5 subies.call(Impreza, Forester)<br>
+                6 <font color="#B8B8B8"> # => returns "Impreza is older than Forester"</font><br>
+                7 <br>
+                </code></div>
+
+                <br>
+
+                <p>
+                  <b>Procs vs. Lambdas</b><br>What do they return?
+                <p>
+
+                <div id="code"><code>
+                1&nbsp; def proc_return_car<br>
+                2&nbsp;&nbsp; Proc.new { return "Car Proc"}.call<br>
+                3&nbsp;&nbsp; return "I am a Subaru"<br>
+                4&nbsp; end<br>
+                5&nbsp; <br>
+                6&nbsp; def lambda_return_car<br>
+                7&nbsp;&nbsp; lambda { return "Car Lambda" }.call<br>
+                8&nbsp;&nbsp; return "I am a Subaru"<br>
+                9&nbsp; end<br>
+                10 <br>
+                11 puts proc_return_car<font color="#B8B8B8"> # returns "Car Proc"</font><br>
+                12 puts lambda_return_car<font color="#B8B8B8"> # returns "I am a Subaru"</font><br>
+                13<br>
+                </code></div><br>
+
+                <p><b>Summary</b><br>
+                  <ol>
+                    <li>Blocs are not objects</li>
+                    <li>Procs and lambdas are objects</li>
+                    <li>Procs don't check the number of arguments</li>
+                    <li>Lambdas check the number of arguments</li>
+                    <li>Procs 'return' whatever is in the code snippet of the proc</li>
+                    <li>Lambdas 'return'the entire method's actual return</li>
+                  </ol>
+              </div>
+</div>
+
+    <div id="left">
+      <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/599670_10100874061101587_703962791_n.jpg?oh=7f9aa35a55d9ae609ceac12942bb0ca8&oe=54CF5813" width=150 height=150/>
+          <p>Welp, here's my DBC blog. Cheers and go Raccoons 2014!</p>
+    </div>
+
+<div id="footer">
+        <div class="wrap">
+          <a href="https://github.com/gaillechua"><img src="http://www.lakshmanswaroop.com/files/img/github-icon.png"/></a>
+          <a href="http://twitter.com/gaille"><img src="http://www.iconsdb.com/icons/preview/white/twitter-xxl.png"/></a>
+          <a href="https://plus.google.com/u/0/107363398322868611640/posts"><img src="http://www.shortandsmith.com/google-plus-3-512.gif"/></a>
+          <a href="https://www.facebook.com/gaille.chua"><img src="http://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png"/></a>
+          <a href="http://www.linkedin.com/in/gabriellechua"><img src="http://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png"/></a>
+          <a href="http://instagram.com/gaillevc"><img src="http://www.iconsdb.com/icons/preview/white/instagram-xxl.png"/></a>
+          <a href="http://gaille.tumblr.com"><img src="http://www.alessiomontone.com/img/tumblr.gif"/></a>
+        </div>
+</div>
+  </body>
+  </html>
+
+
+

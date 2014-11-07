@@ -1,0 +1,78 @@
+html {
+  background-color: black;
+  color: #CCCCCC;
+  font-family: HelveticaNeue-Light;
+
+}
+
+#title {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  border: 3px solid teal;
+  border-radius: 15px;
+  color: orange;
+  font-weight: bold;
+}
+
+#header {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #CCCCCC;
+}
+
+/*#main {*/
+/*  font-size: 16px;*/
+/*  width: 100%;*/
+/*  font-family: Monospace;*/
+/*} */
+
+/*.dtag {*/
+/*  color: red;*/
+/*  font-weight: bold;*/
+
+/*}*/
+
+/*.ddesc {*/
+/*  font-size: 14px;*/
+
+/*}*/
+
+#container {
+    width: 100%;
+}
+
+.code {
+  font-family: Monospace;
+  font-size: 14px;
+}
+
+.description {
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  color: teal;
+}
+
+table, td {
+  border-top: 1px solid teal;
+  table-layout: fixed
+}
+
+th {
+  background-color: teal;
+  color: black;
+}
