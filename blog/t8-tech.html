@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Gaille's Blog</title>
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css"/>
+    </head>
+
+  <body>
+
+    <table class="rule"></table>
+
+    <div id="navbar">
+            <li><a href="http://gaillechua.github.io">HOME</a></li>
+            <li><a href="http://gaillechua.github.io/projects/projects.html">PROJECTS</a></li>
+            <li><a href="http://gaillechua.github.io/blog/index.html">BLOG</a></li>
+            <li><a href="http://gaillechua.github.io/about">ABOUT</a></li>
+            <li><a href="http://gaillechua.github.io/contact">CONTACT</a></li>
+    </div>
+
+    <table class="rule"></table>
+
+  <div id="header"></div>
+
+<div class="blogpost">
+      <div class="blogtitle">
+          Curses, It's Recursion!
+      </div>
+          <div class="blogsubtitle">
+            "In order to understand recursion, one must understand recursion"
+            </div>
+            <div class="date">
+              November 8, 2014
+            </div>
+              <div class="content">
+                <p>Now that we're winding down to our last days before immersive classes, I <i>guess</i> it's time to stop avoiding and start thinking about key programming concepts like recursion. And since we're on the topic, I don't know if my current headache was worsened by the thought of it, or if recursion spurred the headache to begin with. Is that how it works? Gah...</p>
+
+                <p>Recursion is a critical concept in computer programming. A definition provided by <a href="http://mathworld.wolfram.com/Recursion.html">Wolfram MathWorld</a> is:</p>
+
+                <p><i>A recursive process is one in which objects are defined in terms of other objects of the same type. Using some sort of recurrence relation, the entire class of objects can then be built up from a few initial values and a small number of rules. The Fibonacci numbers are most commonly defined recursively. Care, however, must be taken to avoid self-recursion, in which an object is defined in terms of itself, leading to an infinite nesting.</i></p>
+
+                <p>A recursive function/method calls itself. Because of that, you will need an end goal, or <b>base case</b> (a condition where the method will not call itself continuously) as the method will continue in an infinite loop otherwise. As the <a href="http://www.theodinproject.com/ruby-programming/recursive-methods">Odin Project</a> explains, a recursive function will "take a bigger problem and break it down to smaller and smaller pieces (Divide and Conquer) and continuing to feed their solutions back into the original function until some sort of answer is achieved and the whole chain unwinds."</p>
+
+                <p>Let's take a look at how the classic Fibonacci sequence example works in Ruby.</p>
+
+                <div id="code"><code>
+                1 def fibonacci(n)<br>
+                2 &nbsp;&nbsp;return n if n <= 1<br>
+                3 &nbsp;&nbsp;fibonacci(n-1) + fibonacci(n-2)<font color="#B8B8B8"> # The method calls itself!</font><br>
+                4 end<br>
+                5 <br>
+                6 puts fibonacci(10)<br>
+                7 <font color="#B8B8B8"># => 55 is the 10th number in the Fibonacci sequence!</font><br>
+                </code></div>
+
+                <p>The Fibonacci sequence, as displayed in the Ruby method above, is when a successive number ("2") is the sum of the two numbers ("1 + 1") that preceded it. Therefore, the sequence of the 0th through 10th Fibonacci numbers looks like this:</p>
+
+                <p align="center"><b>(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55)</b></p>
+
+                <p>Here's how it would look like it pseudocode:</p>
+
+                <p>
+                <b>Step 1:</b> Take the first two integers (0 and 1)<br>
+                <b>Step 2:</b> Add those two integers (0 + 1 = 1)<br>
+                <b>Step 3:</b> Add the result to the second of the two integers (1 + 1 = 2)<br>
+                <b>Step 4:</b> Repeat Step 3 (1 + 2 = 3)<br>
+                <b>Step 5:</b> Continue infinitely unless there is a condition to break the loop (2+3=5, 5+3=8, 8+3=11, etc.)<br>
+                </p>
+
+                <p>This is a surface-level overview and there are still loads more of intricacies that define recursion and actually transform it into a beautiful thing. The Fibonacci sequence in nature, for example, demonstrates the visual complexities of recursion (<a href="http://www.inspirationgreen.com/fibonacci-sequence-in-nature.html">source</a>):<p>
+
+                <p align="center"><img src="http://www.inspirationgreen.com/assets/images/Art/Fibronacci/nautilus%20shell.jpg"/><br><br>
+
+                <img src="http://www.inspirationgreen.com/assets/images/Art/Fibronacci/hubble.jpg"/><br>><br>
+
+                <img src="http://www.inspirationgreen.com/assets/images/Art/Fibronacci/fibonacciSpiralALOE.jpg"/><br><br></p>
+
+                <p>Well, I guess recursion is not as ugly as it seems! I hope to explore more of this in the near future!</p>
+
+              </div>
+</div>
+
+    <div id="left">
+      <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/599670_10100874061101587_703962791_n.jpg?oh=7f9aa35a55d9ae609ceac12942bb0ca8&oe=54CF5813" width=150 height=150/>
+          <p>Welp, here's my DBC blog. Cheers and go Raccoons 2014!</p>
+    </div>
+
+<div id="footer">
+        <div class="wrap">
+          <a href="https://github.com/gaillechua"><img src="http://www.lakshmanswaroop.com/files/img/github-icon.png"/></a>
+          <a href="http://twitter.com/gaille"><img src="http://www.iconsdb.com/icons/preview/white/twitter-xxl.png"/></a>
+          <a href="https://plus.google.com/u/0/107363398322868611640/posts"><img src="http://www.shortandsmith.com/google-plus-3-512.gif"/></a>
+          <a href="https://www.facebook.com/gaille.chua"><img src="http://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png"/></a>
+          <a href="http://www.linkedin.com/in/gabriellechua"><img src="http://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png"/></a>
+          <a href="http://instagram.com/gaillevc"><img src="http://www.iconsdb.com/icons/preview/white/instagram-xxl.png"/></a>
+          <a href="http://gaille.tumblr.com"><img src="http://www.alessiomontone.com/img/tumblr.gif"/></a>
+        </div>
+</div>
+  </body>
+  </html>
+
+
+
