@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica;
+  font-family: 'Lato', serif;
   background-color: black;
   color: #E5E5E6;
 }
@@ -24,7 +24,7 @@ body {
   color: #E5E5E6;
   font-size: 22px;
   display: inline;
-  padding-right: 20px;
+  padding: 0px 20px 0px 20px;
 }
 
 .rule {
@@ -54,6 +54,13 @@ a:active {
   font-style: bold;
 }
 
+#current a {
+  padding: 0px 12px 0px 12px;
+  border-left: solid 1px orange;
+  border-right: solid 1px orange;
+  color: teal;
+}
+
 #header {
   padding: 0px 0px 0px 0px;
   background-color: black;
@@ -66,45 +73,75 @@ a:active {
 
 #headtext {
     text-align: left;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 50px;
     padding-top: 100px;
     margin-left: 20px;
+    color: orange;
+    opacity: 0.7;
 }
 
 #subheadtext {
     text-align: left;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-style: italic;
     font-size: 20px;
     margin-left: 20px;
 }
 
-#navbar {
-  text-align: right;
-  background-color: black;
-  display: inline-block;
-  float: right;
-  padding-top: 8px;
+#indexheadtext {
+    text-align: left;
+    font-size: 50px;
+    padding-top: 100px;
+    margin-left: 20px;
+    float: left;
+    color: orange;
+    opacity: 0.7;
 }
 
-#navbar li {
-  list-style-type: none;
-  color: #E5E5E6;
-  font-size: 22px;
-  display: inline;
-  padding-right: 20px;
+#indexsubheadtext {
+    text-align: left;
+    font-style: italic;
+    font-size: 20px;
+    margin: 0px;
+    margin-left: 0px;
+    float:left;
+    position: static;
+    color:white;
 }
+
+#indexheroquote {
+  float: right;
+  margin-right: 60px;
+  padding-top: 100px;
+  text-align: right;
+  font-size: 36px;
+  float: right;
+  color: white;
+  opacity: 0.8;
+}
+
+#author {
+  float: right;
+  margin-right: 60px;
+  text-align: right;
+  font-size: 26px;
+  float: right;
+  color: white;
+  opacity: 0.8;
+  margin: 0px;
+}
+
 
 #slidetext {
-    border: solid 1px orange;
+    border: solid 2px orange;
     border-radius: 1em;
     position: absolute;
     text-align: left;
-    font-family: Helvetica;
-    font-size:32px;
+    font-family: 'Lato', serif;
+    font-size:28px;
     background-color: black;
     padding: 10px 20px 10px 20px;
+    margin-top: 120px;
+    opacity: 0.9;
 }
 
 .rulebottomheader1 {
@@ -130,6 +167,30 @@ a:active {
   padding-top: 15px;
 }
 
+.projectthumb {
+  text-align: left;
+  font-size: 18px;
+  margin-right: 150px;
+  margin-left: 150px;
+  padding-top: 25px;
+}
+
+.projectthumb img {
+  border: solid 1px white;
+  text-align: left;
+  opacity: .5;
+  margin-right: 25px;
+}
+
+.projectdesc {
+  margin: 0;
+}
+
+#headshot {
+  border: solid 2px teal;
+  border-radius: 5em;
+  margin-right: 15px;
+}
 
 #footer {
   height: 50px;

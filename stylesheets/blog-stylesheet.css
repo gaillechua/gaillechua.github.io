@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica;
+  font-family: 'Lato', serif;
   background-color: black;
   color: #E5E5E6;
 }
@@ -24,7 +24,7 @@ body {
   color: #E5E5E6;
   font-size: 22px;
   display: inline;
-  padding-right: 20px;
+  padding: 0px 20px 0px 20px;
 }
 
 .rule {
@@ -50,6 +50,13 @@ a:visited {
   color: orange;
 }
 
+#current a {
+  padding: 0px 10px 0px 10px;
+  border-left: solid 1px orange;
+  border-right: solid 1px orange;
+  color: teal;
+}
+
 #header {
   padding: 0px 0px 0px 0px;
   background-color: black;
@@ -62,29 +69,33 @@ a:visited {
 
 #headtext {
     text-align: left;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 50px;
     padding-top: 100px;
     margin-left: 20px;
+    color: orange;
+    opacity: 0.7;
 }
 
 #subheadtext {
     text-align: left;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-style: italic;
     font-size: 20px;
     margin-left: 20px;
+    color: white;
+    opacity: 0.7;
 }
 
 #slidetext {
-    border: solid 1px orange;
+    border: solid 2px orange;
     border-radius: 1em;
     position: absolute;
     text-align: left;
-    font-family: Helvetica;
-    font-size:32px;
+    font-family: 'Lato', serif;
+    font-size:28px;
     background-color: black;
     padding: 10px 20px 10px 20px;
+    margin-top: 120px;
+    opacity: 0.9;
 }
 
 
@@ -103,13 +114,15 @@ a:visited {
   margin-bottom: 20px;
 }
 
-#welcome, #about, #blog, #contact, #projects p {
+#welcome, #about, #blog, #contact, #projects {
   text-align: left;
   font-size: 18px;
   margin-right: 150px;
   margin-left: 150px;
   padding-top: 20px;
 }
+
+
 
 #footer {
   height: 50px;
@@ -176,7 +189,6 @@ a:visited {
 
 .abstract {
   font-size: 16px;
-  font-family: Arial;
   color: white;
   padding-bottom: 10px;
 }
