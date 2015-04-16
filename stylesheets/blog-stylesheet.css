@@ -133,6 +133,7 @@ a:visited {
   bottom: 0;
   z-index: 999999;
   text-align: center;
+  border-top: 1px solid teal;
 }
 
 #footer img {
